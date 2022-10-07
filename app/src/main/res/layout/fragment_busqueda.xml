@@ -21,7 +21,7 @@
                 android:text="Tipo de búsqueda" />
 
             <Spinner
-                android:id="@+id/spinner3"
+                android:id="@+id/alojamiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -39,7 +39,7 @@
                 android:text="Capacidad" />
 
             <Spinner
-                android:id="@+id/spinner4"
+                android:id="@+id/capacidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -57,7 +57,7 @@
                 android:text="Wi-Fi" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/wifi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left|center_vertical" />
@@ -74,7 +74,7 @@
                 android:text="Rango" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/rangoMin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="6"
@@ -87,7 +87,7 @@
                 android:text="-" />
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/rangoMax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="6"
@@ -105,7 +105,7 @@
                 android:text="Ciudad" />
 
             <Spinner
-                android:id="@+id/spinner5"
+                android:id="@+id/ciudad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
@@ -118,7 +118,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/botonBuscar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"

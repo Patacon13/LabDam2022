@@ -7,6 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+import com.mdgz.dam.labdam2022.databinding.FragmentBusquedaBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +21,14 @@ import android.view.ViewGroup;
  */
 public class BusquedaFragment extends Fragment {
 
+    private Spinner alojamientos;
+    private Spinner capacidad;
+    private Spinner ciudad;
+    private CheckBox wifi;
+    private EditText rangoMin;
+    private EditText rangoMax;
+    private Button buscar;
+    private FragmentBusquedaBinding binding;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -48,17 +62,37 @@ public class BusquedaFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        binding = FragmentBusquedaBinding.inflate(getLayoutInflater());
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        alojamientos = binding.alojamiento;
+        capacidad = binding.capacidad;
+        ciudad = binding.ciudad;
+        wifi = binding.wifi;
+        rangoMin = binding.rangoMin;
+        rangoMax = binding.rangoMax;
+        buscar = binding.botonBuscar;
         // Inflate the layout for this fragment
+
+        buscar.setOnClickListener(new ListenerBuscar());
         return inflater.inflate(R.layout.fragment_busqueda, container, false);
+    }
+    public class ListenerBuscar implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+
+        }
     }
 }
